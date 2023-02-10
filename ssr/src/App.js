@@ -2,21 +2,23 @@ import './App.css';
 import { useState } from 'react';
 import React from 'react';
 
+//Q: commenting data returns 'data' is not defined, but the whole getWeatheh fun is exported, why data is not accessibe?
+import data from './WeatherApi';
+import getWeather from './WeatherApi';
+
 function App() {
-  const [count, setCount] = useState(0);
-  const increment = () => {
-    setCount(count + 1);
-  };
-  const decrement = () => {
-    setCount(count - 1);
-  };
+  getWeather();
   return (
     <>
-      <p>{count}</p>
-      <button onClick={increment}>Increment</button>
-      <button onClick={decrement}>decrement</button>
+      <p>
+        weather:<span id="weather"></span>
+      </p>
+      <p>data: {data}</p>
     </>
   );
 }
 
 export default App;
+
+//Q: Why data object is not accessible in UI?
+//Q: Is there a faster way for build and run ?

@@ -5,7 +5,8 @@ import React from 'react';
 import ReactDOMServer from 'react-dom/server';
 import App from '../src/App';
 
-const PORT = 8000;
+//const PORT = 8000;
+const PORT = process.env.PORT || 3006;
 
 const app = express();
 
