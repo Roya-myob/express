@@ -25,8 +25,10 @@ app.use('^/$', (req, res, next) => {
   });
 });
 
+// add middlewares
 app.use(express.static(path.resolve(__dirname, '..', 'build')));
 
+// start express server on port 3006
 app.listen(PORT, () => {
   console.log(`App launched on ${PORT}`);
 });
